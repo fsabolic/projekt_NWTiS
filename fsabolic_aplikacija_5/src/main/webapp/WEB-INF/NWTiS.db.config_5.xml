@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>NWTiS fsabolic 2023.</comment>
+<entry key="adresaAplikacije2">http://200.20.0.4:8080/fsabolic_aplikacija_2/api/</entry>
+<entry key="aplikacija.godina">2023.</entry>
+<entry key="adresaAplikacije1">172.17.0.1</entry>
+<entry key="stranica.brojRedova">15</entry>
+<entry key="aplikacija.verzija">1.23</entry>
+<entry key="autor.prezime">Sabolic</entry>
+<entry key="autor.ime">Fran</entry>
+<entry key="autor.predmet">NWTiS</entry>
+<entry key="mreznaVrataAplikacije1">8123</entry>
+</properties>

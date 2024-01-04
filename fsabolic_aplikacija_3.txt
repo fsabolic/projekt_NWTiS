@@ -1,0 +1,49 @@
+--minimalno 20 aerodroma za preuzimanje
+SELECT * 
+FROM AERODROMI_LETOVI al 
+
+--minimalno 50.000 preuzetih polazaka s aerodroma
+SELECT COUNT(lp.ICAO24) 
+FROM LETOVI_POLASCI lp
+
+--minimalno 10 dana u slijedu u cijelosti za koje su preuzeti podaci polazaka za sve aerodrome
+SELECT DATUM_POLASKA,COUNT(DISTINCT POLAZNI_AERODROM) AS BROJ_AERODROMA
+FROM
+	(SELECT lp.ESTDEPARTUREAIRPORT AS POLAZNI_AERODROM,TO_CHAR(timestamp(lp.firstSeen), 'dd.mm.yyyy')  AS DATUM_POLASKA 
+	FROM LETOVI_POLASCI lp 
+	GROUP BY lp.ESTDEPARTUREAIRPORT, DATUM_POLASKA 
+	HAVING lp.ESTDEPARTUREAIRPORT IN (SELECT al.ICAO FROM AERODROMI_LETOVI al) 
+	ORDER BY TO_DATE(DATUM_POLASKA, 'dd.mm.yyyy'))
+GROUP BY DATUM_POLASKA
+HAVING COUNT(DISTINCT POLAZNI_AERODROM)=(SELECT COUNT(*)-4 FROM AERODROMI_LETOVI al2)
+
+--broj preuzetih podataka po danima za sve aerodrome sortirano po danu
+SELECT TO_CHAR(timestamp(lp.firstSeen), 'dd.mm.yyyy') AS DATUM_POLASKA, COUNT(*) AS BROJ_LETOVA 
+FROM LETOVI_POLASCI lp 
+GROUP BY DATUM_POLASKA 
+ORDER BY TO_DATE(DATUM_POLASKA, 'dd.mm.yyyy')
+
+--broj preuzetih podataka po danima za sve aerodrome pojedinačno i sortirano po aerodromu i danu
+SELECT ESTDEPARTUREAIRPORT,TO_CHAR(timestamp(lp.firstSeen), 'dd.mm.yyyy') AS DATUM_POLASKA, COUNT(*) AS BROJ_LETOVA
+FROM LETOVI_POLASCI lp 
+GROUP BY DATUM_POLASKA,ESTDEPARTUREAIRPORT 
+ORDER BY ESTDEPARTUREAIRPORT,TO_DATE(DATUM_POLASKA, 'dd.mm.yyyy')
+
+--broj preuzetih podataka po danima za odabrani aerodrom sortirano po danu
+SELECT ESTDEPARTUREAIRPORT,TO_CHAR(timestamp(lp.firstSeen), 'dd.mm.yyyy') AS DATUM_POLASKA, COUNT(*) AS BROJ_LETOVA
+FROM LETOVI_POLASCI lp 
+GROUP BY DATUM_POLASKA,ESTDEPARTUREAIRPORT 
+HAVING ESTDEPARTUREAIRPORT LIKE '%LDZA%'
+ORDER BY TO_DATE(DATUM_POLASKA, 'dd.mm.yyyy')
+
+--broj preuzetih podataka za sve aerodrome pojedinačno sortirano po aerodromu na odabrani dan
+SELECT ESTDEPARTUREAIRPORT,TO_CHAR(timestamp(lp.firstSeen), 'dd.mm.yyyy') AS DATUM_POLASKA, COUNT(*) AS BROJ_LETOVA
+FROM LETOVI_POLASCI lp 
+GROUP BY DATUM_POLASKA,ESTDEPARTUREAIRPORT 
+HAVING TO_CHAR(timestamp(lp.firstSeen), 'dd.mm.yyyy') LIKE '%01.01.2021%'
+ORDER BY ESTDEPARTUREAIRPORT
+
+
+
+
+

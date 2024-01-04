@@ -1,0 +1,9 @@
+stranica.brojRedova=15
+autor.ime=Fran
+autor.prezime=Sabolic
+autor.predmet=NWTiS
+aplikacija.godina=2023.
+aplikacija.verzija=1.23
+adresaAplikacije1=172.17.0.1
+mreznaVrataAplikacije1=8123
+adresaAplikacije2=http://200.20.0.4:8080/fsabolic_aplikacija_2/api/

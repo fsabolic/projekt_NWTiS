@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "18c14452-9e88-41bd-8a02-605a19c898e7",
+		"name": "fsabolic_aplikacija_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27159093"
+	},
+	"item": [
+		{
+			"name": "aerodromi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/aerodromi?traziNaziv=ap&traziDrzavu=CA&broj=5&odBroja=10",
+					"protocol": "http",
+					"host": [
+						"200",
+						"20",
+						"0",
+						"4"
+					],
+					"port": "8080",
+					"path": [
+						"fsabolic_aplikacija_2",
+						"api",
+						"aerodromi"
+					],
+					"query": [
+						{
+							"key": "traziNaziv",
+							"value": "ap"
+						},
+						{
+							"key": "traziDrzavu",
+							"value": "CA"
+						},
+						{
+							"key": "broj",
+							"value": "5"
+						},
+						{
+							"key": "odBroja",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "aerodromi/{icao}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/aerodromi/EHEH"
+			},
+			"response": []
+		},
+		{
+			"name": "aerodromi/{icaoOd}/{icaoDo}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/aerodromi/EHEH/LOWW"
+			},
+			"response": []
+		},
+		{
+			"name": "aerodromi/{icao}/udaljenosti",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/aerodromi/LDZA/udaljenosti?odBroja=5&broj=5",
+					"protocol": "http",
+					"host": [
+						"200",
+						"20",
+						"0",
+						"4"
+					],
+					"port": "8080",
+					"path": [
+						"fsabolic_aplikacija_2",
+						"api",
+						"aerodromi",
+						"LDZA",
+						"udaljenosti"
+					],
+					"query": [
+						{
+							"key": "odBroja",
+							"value": "5"
+						},
+						{
+							"key": "broj",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "aerodromi/{icaoOd}/izracunaj/{icaoDo}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/aerodromi/LDZA/izracunaj/LOWW"
+			},
+			"response": []
+		},
+		{
+			"name": "aerodromi/{icaoOd}/udaljenost1/{icaoDo}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/aerodromi/EHEH/udaljenost1/LOWW?broj=5&odBroja=5",
+					"protocol": "http",
+					"host": [
+						"200",
+						"20",
+						"0",
+						"4"
+					],
+					"port": "8080",
+					"path": [
+						"fsabolic_aplikacija_2",
+						"api",
+						"aerodromi",
+						"EHEH",
+						"udaljenost1",
+						"LOWW"
+					],
+					"query": [
+						{
+							"key": "broj",
+							"value": "5"
+						},
+						{
+							"key": "odBroja",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "aerodromi/{icaoOd}/udaljenost1/{icaoDo} Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/aerodromi/EHEH/udaljenost2?drzava=AT&km=1500&broj=5&odBroja=5",
+					"protocol": "http",
+					"host": [
+						"200",
+						"20",
+						"0",
+						"4"
+					],
+					"port": "8080",
+					"path": [
+						"fsabolic_aplikacija_2",
+						"api",
+						"aerodromi",
+						"EHEH",
+						"udaljenost2"
+					],
+					"query": [
+						{
+							"key": "drzava",
+							"value": "AT"
+						},
+						{
+							"key": "km",
+							"value": "1500"
+						},
+						{
+							"key": "broj",
+							"value": "5"
+						},
+						{
+							"key": "odBroja",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nadzor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/nadzor"
+			},
+			"response": []
+		},
+		{
+			"name": "nadzor/INIT",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/nadzor/INIT"
+			},
+			"response": []
+		},
+		{
+			"name": "nadzor/PAUZA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/nadzor/PAUZA"
+			},
+			"response": []
+		},
+		{
+			"name": "nadzor/KRAJ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/nadzor/KRAJ"
+			},
+			"response": []
+		},
+		{
+			"name": "nadzor/INFO/DA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/nadzor/INFO/DA"
+			},
+			"response": []
+		},
+		{
+			"name": "nadzor/INFO/NE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/nadzor/INFO/NE"
+			},
+			"response": []
+		},
+		{
+			"name": "dnevnik",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/dnevnik?vrsta=AP2&broj=5&odBroja=5",
+					"protocol": "http",
+					"host": [
+						"200",
+						"20",
+						"0",
+						"4"
+					],
+					"port": "8080",
+					"path": [
+						"fsabolic_aplikacija_2",
+						"api",
+						"dnevnik"
+					],
+					"query": [
+						{
+							"key": "vrsta",
+							"value": "AP2"
+						},
+						{
+							"key": "broj",
+							"value": "5"
+						},
+						{
+							"key": "odBroja",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dnevnik",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://200.20.0.4:8080/fsabolic_aplikacija_2/api/dnevnik?zahtjev=POSTMAN_TEST&tip=AP2",
+					"protocol": "http",
+					"host": [
+						"200",
+						"20",
+						"0",
+						"4"
+					],
+					"port": "8080",
+					"path": [
+						"fsabolic_aplikacija_2",
+						"api",
+						"dnevnik"
+					],
+					"query": [
+						{
+							"key": "zahtjev",
+							"value": "POSTMAN_TEST"
+						},
+						{
+							"key": "tip",
+							"value": "AP2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

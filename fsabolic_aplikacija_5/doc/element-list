@@ -1,0 +1,12 @@
+org.foi.nwtis.fsabolic.aplikacija_4.ws.WsAerodromi.endpoint
+org.foi.nwtis.fsabolic.aplikacija_4.ws.WsKorisnici.endpoint
+org.foi.nwtis.fsabolic.aplikacija_4.ws.WsLetovi.endpoint
+org.foi.nwtis.fsabolic.aplikacija_4.ws.WsMeteo.endpoint
+org.foi.nwtis.fsabolic.aplikacija_5
+org.foi.nwtis.fsabolic.aplikacija_5.filteri
+org.foi.nwtis.fsabolic.aplikacija_5.rest
+org.foi.nwtis.fsabolic.aplikacija_5.slusaci
+org.foi.nwtis.fsabolic.aplikacija_5.socket
+org.foi.nwtis.fsabolic.aplikacija_5.web
+org.foi.nwtis.fsabolic.aplikacija_5.zrna
+org.foi.nwtis.podaci

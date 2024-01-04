@@ -1,0 +1,3 @@
+mreznaVrata=8123
+brojCekaca=5
+brojRadnika=5

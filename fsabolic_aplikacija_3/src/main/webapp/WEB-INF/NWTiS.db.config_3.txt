@@ -1,0 +1,7 @@
+OpenSkyNetwork.email=fsabolic@student.foi.hr
+ciklus.trajanje=180
+preuzimanje.od=01.12.2022
+preuzimanje.do=13.01.2023
+OpenSkyNetwork.korisnik=FranSabolic
+adresaAplikacije1=172.17.0.1
+mreznaVrataAplikacije1=8123

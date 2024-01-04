@@ -1,0 +1,32 @@
+#-------->B A Z A   P O D A T A K A
+cd ~/fsabolic/fsabolic-projekt
+./scripts/obrisiPripremiPokreni.sh
+
+
+#-------->P A Y A R A   F U L L     [app3,app4,app5]
+export JAVA_HOME=/usr/lib/jvm/jdk-17.0.2
+export PATH=/usr/lib/jvm/jdk-17.0.2/bin:$PATH
+sudo chmod -R g+w /opt/payara-full-6.2023.4/glassfish/domains/domain1/applications/
+sudo chmod -R g+w /opt/payara-full-6.2023.4/glassfish/domains/domain1/generated/
+cd /opt/payara-full-6.2023.4/glassfish/bin
+./asadmin start-domain
+tail -f /opt/payara-full-6.2023.4/glassfish/domains/domain1/logs/server.log
+
+
+#-------->A P P   1
+cd ~/fsabolic/fsabolic-projekt/fsabolic_aplikacija_1/
+java -cp target/libs/*:target/fsabolic_aplikacija_1-1.0.0.jar org.foi.nwtis.fsabolic.aplikacija_1.PokretacPosluzitelja NWTiS.db.config_1.txt
+
+cd ~/fsabolic/fsabolic-projekt/fsabolic_aplikacija_1/
+java -cp target/libs/*:target/fsabolic_aplikacija_1-1.0.0.jar org.foi.nwtis.fsabolic.aplikacija_1.GlavniKlijent INIT
+java -cp target/libs/*:target/fsabolic_aplikacija_1-1.0.0.jar org.foi.nwtis.fsabolic.aplikacija_1.GlavniKlijent INFO DA
+java -cp target/libs/*:target/fsabolic_aplikacija_1-1.0.0.jar org.foi.nwtis.fsabolic.aplikacija_1.GlavniKlijent STATUS
+
+
+#-------->A P P   2
+cd ~/fsabolic/fsabolic-projekt/fsabolic_aplikacija_2
+./scripts/obrisiPripremiPokreni.sh
+docker logs -f fsabolic_payara_micro --since 1m
+
+
+172.17.0.1
