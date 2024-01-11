@@ -1,14 +1,14 @@
-# projekt_NWTiS za 
+# projekt_NWTiS - A Project for Managing Airplane Flight Logs
+
+## Summary
+
+This is a project for the "Advanced Web technologies and Services" class. The **projekt_NWTiS** project focuses on managing airplane flight logs, offering a suite of applications with distinct functionalities. Developed using Java and various Jakarta EE features, the project utilizes Eclipse with Maven as the primary development tool.
+
 
 | Application | Development Tool (IDE) | Java | Server | EE Features | User Interface | Database | Data Access | Purpose |
 |---|---|---|---|---|---|---|---|---|
-| {korisnicko_ime}_aplikacija_proyekta | Eclipse with Maven | 17 | Custom | Jakarta | Socket server | RESTful/JAX-RS web service | JDBC, SQL | Server on network socket (socket server) | RESTful/JAX-RS web service for accessing data |
-| {korisnicko_ime}_aplikacija_proyekta | Eclipse with Maven | 17 | Docker/Payara Micro | Jakarta | EE10 Web | HSQLDB | JDBC, SQL | Web application for managing airport data |
-| {korisnicko_ime}_aplikacija_proyekta | Eclipse with Maven | 17 | Payara Full | Jakarta | EE10 Web | HSQLDB | JPA4, Criteria API | Web application for managing flight data |
-| {korisnicko_ime}_aplikacija_proyekta | Maven, Eclipse with nwtis_bp | 17 | Payara Full | Jakarta | EE10 Web, Jakarta MVC | HSQLDB | JPAS, Criteria API, User interface for working with users, received JMS messages, airports and flights |
-
-This table shows the installation and programming architecture of the system. The table lists the application, development tool (IDE), Java version, server, EE features, user interface, database, data access, and purpose of each application.
-
-The table shows that the system is built using Eclipse, Maven, and Java 17. The system uses a variety of servers, including custom, Docker/Payara Micro, Payara Full, and Payara Full with nwtis_bp. The system also uses a variety of databases, including HSQLDB and Oracle. The system's user interface is a web application. The system's data access methods include JDBC, SQL, JPA, JPAS, and Criteria API.
-
-I hope this helps!
+| 1 | Eclipse with Maven | 17 | Custom |  |  |  | | Socket Server |
+| 2 | Eclipse with Maven | 17 | Docker/Payara Micro | Jakarta EE10 Web |  | Docker/JRE, HSQLDB, nwtis_bp | JDBC, SQL, CriteriaAPI | RESTful/JAX-RS web service |
+| 3 | Eclipse with Maven | 17 | Payara Full | Jakarta EE10 Web || Docker/JRE, HSQLDB, nwtis_bp | JDBC, SQL, CriteriaAPI | Takes data about airplane takeoffs from a chosen airport |
+| 4 | Eclipse with Maven | 17 | Payara Full | Jakarta EE10 | | Docker/JRE, HSQLDB, nwtis_bp | JDBC, SQL, CriteriaAPI | JAX-WS web services and a WebSocket Endpoint |
+| 5 | Eclipse with Maven | 17 | Payara Full | Jakarta EE10 | Jakarta MVC | | | Views for working with users, JMS messages, airports and flights |
